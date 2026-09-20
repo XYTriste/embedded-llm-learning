@@ -1,0 +1,11 @@
+# 系统与驱动日志
+NVIDIA Corporation/
+
+# Python
+__pycache__/
+*.pyc
+
+# 常见临时文件
+Thumbs.db
+.DS_Store
+*.tmp

@@ -1,0 +1,10 @@
+﻿PID 28756  parent: explorer.exe(10956)  started: 09/16/2026 19:13:49  cmdline: "C:\WINDOWS\system32\cmd.exe" 
+    child: conhost.exe(22380)  \??\C:\WINDOWS\system32\conhost.exe 0x4
+PID 43320  parent: msedge.exe(54516)  started: 09/18/2026 21:09:24  cmdline: C:\WINDOWS\system32\cmd.exe /d /s /c ""C:\Program Files (x86)\Common Files\Thunder Network\bho\xl_ext_chrome\xl_ext_chrome.exe" chrome-extension://ncennffkjdiamlpmcbajkmaiiiddgioo/ --parent-window=0" < \\.\pipe\chrome.nativeMessaging.in.98112220a6f545ac > \\.\pipe\chrome.nativeMessaging.out.98112220a6f545ac
+    child: conhost.exe(53768)  \??\C:\WINDOWS\system32\conhost.exe 0x4
+    child: xl_ext_chrome.exe(16568)  "C:\Program Files (x86)\Common Files\Thunder Network\bho\xl_ext_chrome\xl_ext_chrome.exe"  chrome-extension://ncennffkjdiamlpmcbajkmaiiiddgioo/ --parent-window=0 
+PID 68092  parent: ()  started: 09/20/2026 11:55:45  cmdline: "C:\WINDOWS\system32\cmd.exe" /C set PATH=C:\Users\XYTriste\AppData\Local\Programs\Ollama;%PATH% & "C:\Users\XYTriste\AppData\Local\Programs\Ollama\ollama app.exe"
+    child: conhost.exe(46248)  \??\C:\WINDOWS\system32\conhost.exe 0x4
+    child: ollama app.exe(64332)  "C:\Users\XYTriste\AppData\Local\Programs\Ollama\ollama app.exe"
+PID 54252  parent: explorer.exe(10956)  started: 09/20/2026 11:57:18  cmdline: "C:\WINDOWS\system32\cmd.exe" 
+    child: conhost.exe(70832)  \??\C:\WINDOWS\system32\conhost.exe 0x4
