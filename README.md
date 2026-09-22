@@ -14,6 +14,7 @@
 │   ├── 学习记录.md                          # 学习主记录（由 Kimi Work 维护）
 │   ├── GGUF与Q4_K_M量化原理_讲义_20260920.md
 │   ├── 网络结构_从Linear到Transformer_讲义_20260920.md
+│   ├── 注意力机制_从点积到QKV_讲义_20260922.md
 │   ├── 对话记录_端侧大模型部署探索_20260920.md
 │   └── note.md
 └── scripts/     # 实验脚本与输出存档
@@ -24,6 +25,8 @@
     ├── inspect-cmd.ps1          # 命令行探测脚本
     ├── probe-cmd.ps1            # 命令行探针脚本
     └── *.txt                    # 各脚本对应的运行输出存档
+
+根目录另有教学演示脚本：shape-conventions.py（形状约定）、attention-demo.py（注意力手算）、why-dot-product-works.py（梯度雕刻匹配的玩具实证）
 ```
 
 ## 硬件环境
