@@ -18,7 +18,6 @@ metadata_kv_count: 34
   general.base_model.0.repo_url = https://huggingface.co/Qwen/Qwen2.5-7B
   general.tags = array<string>[2] ['chat', 'text-generation']
   general.languages = array<string>[1] ['en']
-  general.file_type = 15
   tokenizer.chat_template = {%- if tools %}
     {{- '<|im_start|>system\n' }}
     {%- if messages[0]['role'] == 'system' %}
@@ -26,17 +25,18 @@ metadata_kv_count: 34
     {%- else %}
         {{- 'You are Qwen, created by Alibaba Clou...<truncated>
   general.quantization_version = 2
+  general.file_type = 15
   (其余键名): qwen2.block_count, qwen2.context_length, qwen2.embedding_length, qwen2.feed_forward_length, qwen2.attention.head_count, qwen2.attention.head_count_kv, qwen2.rope.freq_base, qwen2.attention.layer_norm_rms_epsilon, tokenizer.ggml.model, tokenizer.ggml.pre, tokenizer.ggml.tokens, tokenizer.ggml.token_type, tokenizer.ggml.merges, tokenizer.ggml.eos_token_id, tokenizer.ggml.padding_token_id, tokenizer.ggml.bos_token_id, tokenizer.ggml.add_bos_token
 
 ---- 前 8 个 tensor info ----
+  output.weight  dims=[3584, 152064]  type=Q6_K  nelem=544997376
+  output_norm.weight  dims=[3584]  type=F32  nelem=3584
   token_embd.weight  dims=[3584, 152064]  type=Q4_K  nelem=544997376
-  blk.0.attn_norm.weight  dims=[3584]  type=F32  nelem=3584
-  blk.0.ffn_down.weight  dims=[18944, 3584]  type=Q6_K  nelem=67895296
-  blk.0.ffn_gate.weight  dims=[3584, 18944]  type=Q4_K  nelem=67895296
-  blk.0.ffn_up.weight  dims=[3584, 18944]  type=Q4_K  nelem=67895296
-  blk.0.ffn_norm.weight  dims=[3584]  type=F32  nelem=3584
   blk.0.attn_k.bias  dims=[512]  type=F32  nelem=512
   blk.0.attn_k.weight  dims=[3584, 512]  type=Q4_K  nelem=1835008
+  blk.0.attn_norm.weight  dims=[3584]  type=F32  nelem=3584
+  blk.0.attn_output.weight  dims=[3584, 3584]  type=Q4_K  nelem=12845056
+  blk.0.attn_q.bias  dims=[3584]  type=F32  nelem=3584
 
 ---- tensor 类型直方图（全部 339 个 tensor）----
   F32       tensors= 141  elements=       0.3M  bytes= 0.001 GB
@@ -51,8 +51,8 @@ tensor info 结束位置: 5953935, 对齐(32)后数据区起点: 5953952
 
 ---- 现场解码: blk.0.ffn_gate 的 Q4_K 第一个 super-block ----
 tensor: blk.0.ffn_gate.weight dims=[3584, 18944] type=Q4_K
-super-block: d=0.000106  dmin=0.000725
+super-block: d=0.000106  dmin=0.000727
 8 个子块 scale(6bit)=[47, 50, 44, 63, 51, 45, 47, 47]
-8 个子块 min (6bit)=[40, 52, 49, 39, 63, 47, 43, 58]
+8 个子块 min (6bit)=[40, 52, 48, 39, 63, 47, 43, 58]
 原始 q 值(4bit, 低半字节, 前16个): [7, 2, 1, 7, 2, 7, 4, 3, 9, 6, 3, 4, 15, 7, 7, 7]
-解码出的前 16 个权重: [0.00599, -0.01901, -0.02401, 0.00599, -0.01901, 0.00599, -0.00901, -0.01401, 0.01599, 0.00099, -0.01401, -0.00901, 0.046, 0.00599, 0.00599, 0.00599]
+解码出的前 16 个权重: [0.00596, -0.01906, -0.02406, 0.00596, -0.01906, 0.00596, -0.00905, -0.01406, 0.01596, 0.00095, -0.01406, -0.00905, 0.04598, 0.00596, 0.00596, 0.00596]

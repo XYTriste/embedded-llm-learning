@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 # 解析 Ollama blob 中真实 GGUF 文件的头部结构
 import struct, sys, io
+import argparse
 
-PATH = r"D:\llm_models\blobs\sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730"
+args = argparse.ArgumentParser()
+args.add_argument("--path", help="Path to the GGUF file")
+args = args.parse_args()
+
+PATH = args.path if args.path else r"'D:\\llm_models\\blobs\\sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730'"
 out = io.StringIO()
 def p(*a):
     s = " ".join(str(x) for x in a)
